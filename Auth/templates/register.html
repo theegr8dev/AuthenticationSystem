@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+	Auth System | Sign in
+{% endblock %}
+
+
+{% block content %}
+<body class="text-center">
+	<div class="container">
+		<form method="POST" class="form-register" style="color:white">
+			{{ form.hidden_tag() }}
+	            <h1 class="h3 mb-3 font-weight-normal">
+	                Please Create your Account
+	            </h1>
+	            
+	            {{ form.username.label() }}
+	            {{ form.username(class="form-control", placeholder="User Name") }}
+	            
+	            {{ form.email.label() }}
+	            {{ form.email(class="form-control", placeholder="Email") }}
+	            
+	            {{ form.password.label() }}
+	            {{ form.password(class="form-control", placeholder="Password") }}
+	            
+	            {{ form.confirm_password.label() }}
+	            {{ form.confirm_password(class="form-control", placeholder="Confirm Password") }}
+	            
+	            <br>
+				{{ form.submit.label(class="btn btn-lg btn-block btn-primary") }}	
+				
+		</form>
+	</div>
+</body>
+{% endblock %}
