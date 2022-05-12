@@ -8,7 +8,7 @@
 {% block content %}
 <body class="text-center">
 	<div class="container">
-		<form method="POST" class="form-register" style="color:white">
+		<form method="POST" class="form-register" style="color:white" action=" {{ url_for('login_page') }} ">
 			{{ form.hidden_tag() }}
 	            <h1 class="h3 mb-3 font-weight-normal">
 	                Please Create your Account
@@ -25,7 +25,7 @@
 	           
 	            
 	            <br>
-				{{ form.submit.label(class="btn btn-lg btn-block btn-primary") }}	
+				{{ form.submit(class="btn btn-lg btn-block btn-primary") }}
 				
 
 		</form>
